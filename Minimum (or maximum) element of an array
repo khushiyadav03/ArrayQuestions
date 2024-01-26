@@ -1,0 +1,32 @@
+//minimum (or maximum) element of an array
+#include <stdio.h>
+
+int main(){
+    int size;
+    printf("Enter size: %");
+    scanf("%d", &size);
+
+    int arr[size];
+    printf("Enter elements: ");
+    for(int i = 0; i < size; i++){
+        scanf("%d", &arr[i]);
+    }
+
+    int minValue = arr[0];
+    for (int i = 1; i<size; i++){
+        if(arr[i] < minValue){
+            minValue = arr[i];
+        }
+    }
+    printf("Min value: %d \n", minValue);
+
+    int maxValue = arr[size];
+    for (int i = 1; i<size; i++){
+        if (arr[i]>maxValue){
+            maxValue = arr[i];
+        }
+    }
+    printf("Max value: %d \n", maxValue);
+
+    return 0;
+}
